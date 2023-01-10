@@ -1,0 +1,26 @@
+%Family Tree
+
+male(vicky).
+male(oki).
+male(aji).
+male(fadhlan).
+male(roberth).
+male(albert).
+male(fauzi).
+female(dina).
+female(alya).
+female(nisa).
+female(miya).
+
+orangtua(oki, dina).
+orangtua(robert, miya).
+orangtua(vicky, dina).
+orangtua(aji, alya).
+orangtua(alya, aji).
+orangtua(roberth, fadhlan).
+orangtua(aji, nisa).
+
+ayah(X,Y) :- male(X), orangtua(X,Y).
+ibu(X,Y) :- female(X), orangtua(X,Y).
+kakek(X,Y) :- male(X), orangtua(X,Y).
+
